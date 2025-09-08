@@ -26,7 +26,5 @@ public class Ejercicio5 {
 
             System.out.println("Cliente DNI: " + dni + " | Servicio: " + tipo + " | Monto: $" + monto);
         }
-
-        sc.close();
     }
 }

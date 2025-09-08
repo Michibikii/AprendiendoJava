@@ -37,8 +37,6 @@ public class Ejercicio4 {
             System.out.println("Camión " + (i + 1) + ": " + patente[i] + " | " + chofer[i] + " | " + carga[i] + " | " + hora[i]);
         }
         System.out.println("Cantidad de camiones con carga de té: " + contadorTe);
-
-        sc.close();
     }
 }
 

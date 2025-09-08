@@ -29,8 +29,6 @@ public class Ejercicio6 {
         }
 
         System.out.println("Mejor tiempo: " + mejorTiempo + " seg. Vehículo: " + mejorVehiculo);
-
-        sc.close();
     }
 }
 

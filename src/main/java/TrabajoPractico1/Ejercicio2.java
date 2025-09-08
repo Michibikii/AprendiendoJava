@@ -28,7 +28,5 @@ public class Ejercicio2 {
 
         System.out.println("Aprobados: " + aprobados);
         System.out.println("Desaprobados: " + desaprobados);
-
-        sc.close();
     }
 }

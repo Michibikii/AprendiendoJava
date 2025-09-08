@@ -29,7 +29,5 @@ public class Ejercicio1 {
         double promedio = (double) suma / n;
         System.out.println("Nota más alta: " + max);
         System.out.println("Promedio: " + promedio);
-
-        sc.close();
     }
 }

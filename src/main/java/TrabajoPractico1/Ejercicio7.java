@@ -48,7 +48,5 @@ public class Ejercicio7 {
             System.out.println("Porcentaje de varones 16-65 años: " + porcentaje + "%");
         }
         System.out.println("Persona de mayor edad: DNI " + dniMayor + ", Sexo " + sexoMayor + ", Edad " + edadMayor);
-
-        sc.close();
     }
 }
