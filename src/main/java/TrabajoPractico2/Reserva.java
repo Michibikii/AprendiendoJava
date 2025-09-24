@@ -8,7 +8,7 @@ package TrabajoPractico2;
  *
  * @author Agustin Duarte
  */
-public class Reserva {
+ class Reserva {
     private String nombre;
     private String telefono;
 

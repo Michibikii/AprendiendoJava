@@ -8,49 +8,52 @@ package TrabajoPractico2;
  *
  * @author Agustin Duarte
  */
+import javax.swing.JOptionPane;
+
 // Clase que maneja la sala de cine
 class Cine {
-    // Matriz 10x10 donde cada asiento puede tener una Reserva o estar vacío (null)
     private Reserva[][] sala;
 
-    // Constructor: inicializa la sala con 100 asientos libres
     public Cine() {
-        sala = new Reserva[10][10]; 
+        sala = new Reserva[10][10]; // 10 filas x 10 asientos
     }
 
-    // Mostrar mapa de la sala
+    // Mostrar mapa de la sala en un JOptionPane
     public void mostrarSala() {
-        System.out.println("\n===== MAPA DE LA SALA =====");
+        StringBuilder mapa = new StringBuilder("===== MAPA DE LA SALA =====\n");
         for (int i = 0; i < sala.length; i++) {
             for (int j = 0; j < sala[i].length; j++) {
                 if (sala[i][j] == null) {
-                    System.out.print("[ ] "); // disponible
+                    mapa.append("[ ] ");
                 } else {
-                    System.out.print("[X] "); // reservado
+                    mapa.append("[X] ");
                 }
             }
-            System.out.println(" <- Fila " + (i + 1));
+            mapa.append(" <- Fila " + (i + 1) + "\n");
         }
-        System.out.println("Leyenda: [ ] = disponible, [X] = reservado");
+        mapa.append("\nLeyenda: [ ] = disponible, [X] = reservado");
+        JOptionPane.showMessageDialog(null, mapa.toString());
     }
 
     // Hacer una reserva
     public void reservarAsiento(int fila, int columna, String nombre, String telefono) {
         if (sala[fila][columna] == null) {
             sala[fila][columna] = new Reserva(nombre, telefono);
-            System.out.println("Reserva realizada con éxito para " + nombre);
+            JOptionPane.showMessageDialog(null, "Reserva realizada con éxito para " + nombre);
         } else {
-            System.out.println("Asiento ocupado. Lo tiene reservado: " + sala[fila][columna]);
+            JOptionPane.showMessageDialog(null,
+                    "Asiento ocupado. Lo tiene reservado: " + sala[fila][columna]);
         }
     }
 
     // Eliminar una reserva
     public void eliminarReserva(int fila, int columna) {
         if (sala[fila][columna] != null) {
-            System.out.println("Reserva de " + sala[fila][columna].getNombre() + " eliminada.");
+            JOptionPane.showMessageDialog(null,
+                    "Reserva de " + sala[fila][columna].getNombre() + " eliminada.");
             sala[fila][columna] = null; // liberar asiento
         } else {
-            System.out.println("El asiento ya estaba libre.");
+            JOptionPane.showMessageDialog(null, "El asiento ya estaba libre.");
         }
     }
 }
