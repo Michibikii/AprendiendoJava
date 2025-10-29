@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package TrabajoPractico3;
-import java.util.ArrayList;
-import java.util.Scanner; 
 /**
  *
  * @author Agustin Duarte
