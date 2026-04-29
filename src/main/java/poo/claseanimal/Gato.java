@@ -1,20 +1,13 @@
 package poo.claseanimal;
 
-public class Gato implements Animal {
-    
-    private String nombre;
-    
+public class Gato extends Mascota {
+
     public Gato(String nombre) {
-        this.nombre = nombre;
+        super(nombre);
     }
 
     @Override
     public String hablar() {
         return "miau";
-    }
-
-    @Override
-    public String getNombre() {
-        return nombre;
     }
 }

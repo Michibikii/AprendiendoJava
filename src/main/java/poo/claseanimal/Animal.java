@@ -2,8 +2,8 @@ package poo.claseanimal;
 
 public interface Animal {
     
-    String hablar();
+    public String hablar();
     
-    String getNombre();
+    public String getNombre();
     
 }
