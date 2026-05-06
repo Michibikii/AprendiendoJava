@@ -10,4 +10,9 @@ public class Gato extends Mascota {
     public String hablar() {
         return "miau";
     }
+    
+    @Override
+    public String hacerTruco() {
+        return "arañar el sofá";
+    }
 }
