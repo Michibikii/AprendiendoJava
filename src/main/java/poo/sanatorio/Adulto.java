@@ -1,13 +1,11 @@
 package poo.sanatorio;
 
-public class Adulto extends Paciente {
+public class Adulto extends Paciente implements DeptAdministracion, DeptClinica {
     private String pa;
     private double altura;
     private double peso;
 
-    public Adulto() {
-        super();
-    }
+    public Adulto() {}
 
     public Adulto(String dni, String nombre, String obraSocial, String pa, double altura, double peso) {
         super(dni, nombre, obraSocial);
@@ -38,5 +36,30 @@ public class Adulto extends Paciente {
 
     public void setPeso(double peso) {
         this.peso = peso;
+    }
+
+    @Override
+    public String obtenerCobertura() {
+        return this.obraSocial;
+    }
+
+    @Override
+    public double obtenerDescuento() {
+        return 0.10; 
+    }
+
+    @Override
+    public String obtenerVademecum() {
+        return "Vademecum estándar";
+    }
+
+    @Override
+    public String recetarRx() {
+        return "Radiografía de tórax";
+    }
+
+    @Override
+    public String recetarSangre() {
+        return "Análisis de sangre completo";
     }
 }

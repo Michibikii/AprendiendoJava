@@ -1,14 +1,11 @@
 package poo.sanatorio;
 
-public class Pediatrico extends Paciente {
+public class Pediatrico extends Paciente implements DeptAdministracion, DeptNutricion {
     private double peso;
     private String celular;
     private String tutor;
-    private String dieta;
 
-    public Pediatrico() {
-        super();
-    }
+    public Pediatrico() {}
 
     public Pediatrico(String dni, String nombre, String obraSocial, double peso, String celular, String tutor) {
         super(dni, nombre, obraSocial);
@@ -41,11 +38,23 @@ public class Pediatrico extends Paciente {
         this.tutor = tutor;
     }
 
-    public String getDieta() {
-        return dieta;
+    @Override
+    public String obtenerCobertura() {
+        return this.obraSocial;
     }
 
-    public void setDieta(String dieta) {
-        this.dieta = dieta;
+    @Override
+    public double obtenerDescuento() {
+        return 0.15; 
+    }
+
+    @Override
+    public String obtenerVademecum() {
+        return "Vademecum pediátrico";
+    }
+
+    @Override
+    public String obtenerTipoDieta() {
+        return "Dieta balanceada pediátrica";
     }
 }

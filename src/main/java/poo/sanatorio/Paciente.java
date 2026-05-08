@@ -37,4 +37,8 @@ public abstract class Paciente {
     public void setObraSocial(String obraSocial) {
         this.obraSocial = obraSocial;
     }
+
+    public String resumenPaciente() {
+        return nombre + " (DNI " + dni + ") - Obra Social: " + obraSocial;
+    }
 }

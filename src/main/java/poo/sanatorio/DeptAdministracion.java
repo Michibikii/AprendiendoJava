@@ -1,9 +1,9 @@
 package poo.sanatorio;
 
 public interface DeptAdministracion {
-	String obtenerCobertura(Paciente paciente);
+	String obtenerCobertura();
 
-	double obtenerDescuento(Paciente paciente);
+	double obtenerDescuento();
 
-	String obtenerVademecum(Paciente paciente);
+	String obtenerVademecum();
 }
